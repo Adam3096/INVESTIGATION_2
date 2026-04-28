@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Investigation 2: Display Interfacing</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #f0f3f5; }
+        .wizard-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; border-left: 5px solid #2980b9; }
+        h1 { color: #2c3e50; text-align: center; }
+        .q-box { margin-bottom: 20px; padding: 15px; background: #fafafa; border: 1px solid #eee; }
+        .q-text { font-weight: bold; color: #34495e; }
+        textarea, input { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .code-area { font-family: 'Courier New', monospace; background: #2d3436; color: #dfe6e9; height: 200px; }
+        .ref { font-size: 0.8em; color: #95a5a6; }
+    </style>
+</head>
+<body>
+    <h1>Investigation 2: Display Systems</h1>
+    <p><strong>Topic:</strong> PWM Control, Seven-Segments, and LCD Interfacing</p>
+
+    <div class="wizard-card">
+        <div class="q-box">
+            <span class="q-text">1. PWM is used to control LED brightness. What are the two main components that define a PWM signal?</span>
+            <input type="text" placeholder="Component 1 and Component 2...">
+            <span class="ref">[Ref: Course Material Page-157]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">2. Calculate the average voltage of a 5V PWM signal with a 75% duty cycle.</span>
+            <input type="text" placeholder="Show calculation...">
+            <span class="ref">[Ref: Course Material Page-158]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">3. Which Arduino-Uno pins are capable of hardware PWM? (List all 6 pins).</span>
+            <input type="text" placeholder="3, 5, ...">
+            <span class="ref">[Ref: Course Material Page-161]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">4. Truth Table: Which segments (A-G) must be turned 'ON' to display the digit '4'?</span>
+            <input type="text" placeholder="List segments (e.g., B, C, F, G)...">
+            <span class="ref">[Ref: Course Material Page-178]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">5. Architecture: In a "Common Anode" 7-segment display, are the LEDs turned on by a HIGH or LOW signal from the Arduino?</span>
+            <input type="text" placeholder="HIGH or LOW? Explain why.">
+            <span class="ref">[Ref: Course Material Page-179, 180]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">6. Sketch Writing: Using <code>analogWrite()</code>, write a command to set a PWM pin (Pin 6) to 50% brightness.</span>
+            <input type="text" placeholder="analogWrite(6, ...);">
+            <span class="ref">[Ref: Course Material Page-162]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">7. Why are 330Ω resistors typically used between the Arduino and the segments of a display?</span>
+            <textarea placeholder="Explain current limiting and safety..."></textarea>
+            <span class="ref">[Ref: Course Material Page-184]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">8. Mapping Sketch: Write the <code>map()</code> function to scale a sensor range (0-1023) to a PWM range (0-255).</span>
+            <input type="text" placeholder="result = map(value, ...);">
+            <span class="ref">[Ref: Course Material Page-168]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">9. Library Usage: In the <code>SevSeg.h</code> library, which function is used to display a specific integer?</span>
+            <input type="text" placeholder="sevseg.XXXXXX(number);">
+            <span class="ref">[Ref: Course Material Page-182]</span>
+        </div>
+
+        <div class="q-box">
+            <span class="q-text">10. Sketch Writing: Write the <code>loop()</code> code to display the number '7' and refresh a <code>sevseg</code> object.</span>
+            <textarea class="code-area">void loop() {
+    // Set number to 7
+    // Refresh display
+}</textarea>
+        </div>
+    </div>
+    <button onclick="window.print()">Submit & Print Investigation</button>
+</body>
+</html>
